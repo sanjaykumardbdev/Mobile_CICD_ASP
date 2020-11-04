@@ -1,0 +1,24 @@
+
+Website: https://nationalskillsregistry.com/
+
+Login:   https://nationalskillsregistry.com/nasscom/pageflows/itp/itpTransactions/ItpTransactionsController.jpf
+
+ITPIN : 891177249712
+Ack No : 126126704C
+Login Id : NSR_sanj/India@12345
+Register Email Id: sanjaykumar.dbdev@gmail.com
+
+Question	What is favroid sport player: Dhoni
+
+
+
+Website: https://nationalskillsregistry.com/
+
+Login:   https://nationalskillsregistry.com/nasscom/pageflows/itp/itpTransactions/ItpTransactionsController.jpf
+
+ITPIN : 891177249712
+Ack No : 126126704C
+Login Id : NSR_sanj/India@12345
+Register Email Id: sanjaykumar.dbdev@gmail.com
+
+Question	What is favroid sport player: Dhoni

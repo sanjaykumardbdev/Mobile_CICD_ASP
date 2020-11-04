@@ -1,0 +1,16 @@
+The Skylake Core i7 processors have 8 MB of cache while the i5s only have 6 MB.
+
+
+
+
+How to Find UPI ID across Different Payment Platforms
+https://blog.payumoney.com/how-to-find-upi-id-across-different-payment-platforms/#:~:text=The%20user%20can%20simple%20share,be%20different%20for%20different%20apps.&text=In%20other%20apps%2C%20your%20UPI,with%2C%20like%20yourname%40bankname.
+
+
+
+paytm: 
+upi id: 9620997800@paytm
+googlepay:
+contactsanjaykumar@okicici
+phonepay:
+9620997800@ybl
