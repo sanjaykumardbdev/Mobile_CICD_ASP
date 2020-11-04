@@ -1,8 +1,0 @@
-http://192.168.0.1/		I****@1....5
-wifi: pass: 88256073
-
-https://selfcare.actcorp.in/group/blr/myaccount
-
-You are logged in as
-102438313506
-Your IP: 10.232.178.89
