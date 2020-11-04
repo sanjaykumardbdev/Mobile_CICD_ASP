@@ -1,0 +1,4 @@
+insert into scott.dept(10,'asdf','asdf')
+/
+commit
+/

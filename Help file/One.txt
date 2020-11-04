@@ -1,0 +1,327 @@
+create repository and branch from server: 
+
+C:\Users\kusno8\source>git clone https://MobileApplicationOrg@dev.azure.com/MobileApplicationOrg/Mobile_Apps_Agile/_git/Mobile_Apps_Agile
+Cloning into 'Mobile_Apps_Agile'...
+remote: Azure Repos
+remote: Found 133 objects to send. (158 ms)
+Receiving objects: 100% (133/133), 753.72 KiB | 2.63 MiB/s, done.
+Resolving deltas: 100% (14/14), done.
+
+C:\Users\kusno8\source>dotnet new mvc
+The template "ASP.NET Core Web App (Model-View-Controller)" was created successfully.
+This template contains technologies from parties other than Microsoft, see https://aka.ms/aspnetcore/3.1-third-party-notices for details.
+
+Processing post-creation actions...
+Running 'dotnet restore' on C:\Users\kusno8\source\source.csproj...
+  Determining projects to restore...
+  Restored C:\Users\kusno8\source\source.csproj (in 255 ms).
+
+Restore succeeded.
+
+
+C:\Users\kusno8\source>cd Mobile_Apps_Agile
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 10DA-7901
+
+ Directory of C:\Users\kusno8\source\Mobile_Apps_Agile
+
+06/25/2020  08:43 AM    <DIR>          .
+06/25/2020  08:43 AM    <DIR>          ..
+               0 File(s)              0 bytes
+               2 Dir(s)  25,325,387,776 bytes free
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>dotnet new mvc
+The template "ASP.NET Core Web App (Model-View-Controller)" was created successfully.
+This template contains technologies from parties other than Microsoft, see https://aka.ms/aspnetcore/3.1-third-party-notices for details.
+
+Processing post-creation actions...
+Running 'dotnet restore' on C:\Users\kusno8\source\Mobile_Apps_Agile\Mobile_Apps_Agile.csproj...
+  Determining projects to restore...
+  Restored C:\Users\kusno8\source\Mobile_Apps_Agile\Mobile_Apps_Agile.csproj (in 235 ms).
+
+Restore succeeded.
+
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git add --all
+warning: LF will be replaced by CRLF in appsettings.Development.json.
+The file will have its original line endings in your working directory
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Controllers/HomeController.cs
+        new file:   Mobile_Apps_Agile.csproj
+        new file:   Models/ErrorViewModel.cs
+        new file:   Program.cs
+        new file:   Properties/launchSettings.json
+        new file:   Startup.cs
+        new file:   Views/Home/Index.cshtml
+        new file:   Views/Home/Privacy.cshtml
+        new file:   Views/Shared/Error.cshtml
+        new file:   Views/Shared/_Layout.cshtml
+        new file:   Views/Shared/_ValidationScriptsPartial.cshtml
+        new file:   Views/_ViewImports.cshtml
+        new file:   Views/_ViewStart.cshtml
+        new file:   appsettings.Development.json
+        new file:   appsettings.json
+        new file:   obj/Mobile_Apps_Agile.csproj.nuget.dgspec.json
+        new file:   obj/Mobile_Apps_Agile.csproj.nuget.g.props
+        new file:   obj/Mobile_Apps_Agile.csproj.nuget.g.targets
+        new file:   obj/project.assets.json
+        new file:   obj/project.nuget.cache
+        new file:   wwwroot/css/site.css
+        new file:   wwwroot/favicon.ico
+        new file:   wwwroot/js/site.js
+        new file:   wwwroot/lib/bootstrap/LICENSE
+        new file:   wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css
+        new file:   wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map
+        new file:   wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css
+        new file:   wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map
+        new file:   wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css
+        new file:   wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map
+        new file:   wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css
+        new file:   wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map
+        new file:   wwwroot/lib/bootstrap/dist/css/bootstrap.css
+        new file:   wwwroot/lib/bootstrap/dist/css/bootstrap.css.map
+        new file:   wwwroot/lib/bootstrap/dist/css/bootstrap.min.css
+        new file:   wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map
+        new file:   wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js
+        new file:   wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map
+        new file:   wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js
+        new file:   wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map
+        new file:   wwwroot/lib/bootstrap/dist/js/bootstrap.js
+        new file:   wwwroot/lib/bootstrap/dist/js/bootstrap.js.map
+        new file:   wwwroot/lib/bootstrap/dist/js/bootstrap.min.js
+        new file:   wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map
+        new file:   wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt
+        new file:   wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js
+        new file:   wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js
+        new file:   wwwroot/lib/jquery-validation/LICENSE.md
+        new file:   wwwroot/lib/jquery-validation/dist/additional-methods.js
+        new file:   wwwroot/lib/jquery-validation/dist/additional-methods.min.js
+        new file:   wwwroot/lib/jquery-validation/dist/jquery.validate.js
+        new file:   wwwroot/lib/jquery-validation/dist/jquery.validate.min.js
+        new file:   wwwroot/lib/jquery/LICENSE.txt
+        new file:   wwwroot/lib/jquery/dist/jquery.js
+        new file:   wwwroot/lib/jquery/dist/jquery.min.js
+        new file:   wwwroot/lib/jquery/dist/jquery.min.map
+
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>git commit -m "created new mvc"
+[master e2f4ca1] created new mvc
+ 56 files changed, 39780 insertions(+)
+ create mode 100644 Controllers/HomeController.cs
+ create mode 100644 Mobile_Apps_Agile.csproj
+ create mode 100644 Models/ErrorViewModel.cs
+ create mode 100644 Program.cs
+ create mode 100644 Properties/launchSettings.json
+ create mode 100644 Startup.cs
+ create mode 100644 Views/Home/Index.cshtml
+ create mode 100644 Views/Home/Privacy.cshtml
+ create mode 100644 Views/Shared/Error.cshtml
+ create mode 100644 Views/Shared/_Layout.cshtml
+ create mode 100644 Views/Shared/_ValidationScriptsPartial.cshtml
+ create mode 100644 Views/_ViewImports.cshtml
+ create mode 100644 Views/_ViewStart.cshtml
+ create mode 100644 appsettings.Development.json
+ create mode 100644 appsettings.json
+ create mode 100644 obj/Mobile_Apps_Agile.csproj.nuget.dgspec.json
+ create mode 100644 obj/Mobile_Apps_Agile.csproj.nuget.g.props
+ create mode 100644 obj/Mobile_Apps_Agile.csproj.nuget.g.targets
+ create mode 100644 obj/project.assets.json
+ create mode 100644 obj/project.nuget.cache
+ create mode 100644 wwwroot/css/site.css
+ create mode 100644 wwwroot/favicon.ico
+ create mode 100644 wwwroot/js/site.js
+ create mode 100644 wwwroot/lib/bootstrap/LICENSE
+ create mode 100644 wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css
+ create mode 100644 wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map
+ create mode 100644 wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css
+ create mode 100644 wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map
+ create mode 100644 wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css
+ create mode 100644 wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map
+ create mode 100644 wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css
+ create mode 100644 wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map
+ create mode 100644 wwwroot/lib/bootstrap/dist/css/bootstrap.css
+ create mode 100644 wwwroot/lib/bootstrap/dist/css/bootstrap.css.map
+ create mode 100644 wwwroot/lib/bootstrap/dist/css/bootstrap.min.css
+ create mode 100644 wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map
+ create mode 100644 wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js
+ create mode 100644 wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map
+ create mode 100644 wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js
+ create mode 100644 wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map
+ create mode 100644 wwwroot/lib/bootstrap/dist/js/bootstrap.js
+ create mode 100644 wwwroot/lib/bootstrap/dist/js/bootstrap.js.map
+ create mode 100644 wwwroot/lib/bootstrap/dist/js/bootstrap.min.js
+ create mode 100644 wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map
+ create mode 100644 wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt
+ create mode 100644 wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js
+ create mode 100644 wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js
+ create mode 100644 wwwroot/lib/jquery-validation/LICENSE.md
+ create mode 100644 wwwroot/lib/jquery-validation/dist/additional-methods.js
+ create mode 100644 wwwroot/lib/jquery-validation/dist/additional-methods.min.js
+ create mode 100644 wwwroot/lib/jquery-validation/dist/jquery.validate.js
+ create mode 100644 wwwroot/lib/jquery-validation/dist/jquery.validate.min.js
+ create mode 100644 wwwroot/lib/jquery/LICENSE.txt
+ create mode 100644 wwwroot/lib/jquery/dist/jquery.js
+ create mode 100644 wwwroot/lib/jquery/dist/jquery.min.js
+ create mode 100644 wwwroot/lib/jquery/dist/jquery.min.map
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git push
+Enumerating objects: 79, done.
+Counting objects: 100% (79/79), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (61/61), done.
+Writing objects: 100% (78/78), 742.22 KiB | 43.66 MiB/s, done.
+Total 78 (delta 11), reused 74 (delta 11)
+remote: Analyzing objects... (78/78) (20398 ms)
+remote: Storing packfile... done (126 ms)
+remote: Storing index... done (100 ms)
+To https://dev.azure.com/MobileApplicationOrg/Mobile_Apps_Agile/_git/Mobile_Apps_Agile
+   7bbdf7b..e2f4ca1  master -> master
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git pull
+From https://dev.azure.com/MobileApplicationOrg/Mobile_Apps_Agile/_git/Mobile_Apps_Agile
+ * [new branch]      POC        -> origin/POC
+Already up to date.
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>cd ..\POC
+
+C:\Users\kusno8\source\POC>git pull
+fatal: not a git repository (or any of the parent directories): .git
+
+C:\Users\kusno8\source\POC>git init
+
+
+
+Initialized empty Git repository in C:/Users/kusno8/source/POC/.git/
+
+C:\Users\kusno8\source\POC>git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=<remote>/<branch> master
+
+
+C:\Users\kusno8\source\POC>git clone https://MobileApplicationOrg@dev.azure.com/MobileApplicationOrg/Mobile_Apps_Agile/_git/Mobile_Apps_Agile
+Cloning into 'Mobile_Apps_Agile'...
+remote: Azure Repos
+remote: Found 137 objects to send. (257 ms)
+Receiving objects: 100% (137/137), 754.61 KiB | 2.68 MiB/s, done.
+Resolving deltas: 100% (14/14), done.
+
+C:\Users\kusno8\source\POC>copy con poc.txt
+poc.txt
+^Z
+        1 file(s) copied.
+
+C:\Users\kusno8\source\POC>git add --all
+fatal: not a git repository (or any of the parent directories): .git
+
+C:\Users\kusno8\source\POC>cd ..
+
+C:\Users\kusno8\source>cd Mobile_Apps_Agile
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>copy con mas.txt
+master
+^Z
+        1 file(s) copied.
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git add --all
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git commit -m "new file mas"
+[master 698c30c] new file mas
+ 1 file changed, 1 insertion(+)
+ create mode 100644 mas.txt
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 289 bytes | 48.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Analyzing objects... (3/3) (8 ms)
+remote: Storing packfile... done (147 ms)
+remote: Storing index... done (56 ms)
+To https://dev.azure.com/MobileApplicationOrg/Mobile_Apps_Agile/_git/Mobile_Apps_Agile
+   e2f4ca1..698c30c  master -> master
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git pull
+Already up to date.
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git branch
+* master
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git remote
+origin
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git checkout POC
+Switched to a new branch 'POC'
+Branch 'POC' set up to track remote branch 'POC' from 'origin'.
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git remote
+origin
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git branch
+* POC
+  master
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git sync
+git: 'sync' is not a git command. See 'git --help'.
+
+The most similar command is
+        svn
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>copy con poc.txt
+poc
+^Z
+        1 file(s) copied.
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git add --all
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git commit -m "added poc.txt"
+[POC fa2e815] added poc.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 poc.txt
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git status
+On branch POC
+Your branch is ahead of 'origin/POC' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 289 bytes | 96.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Analyzing objects... (3/3) (143 ms)
+remote: Storing packfile... done (143 ms)
+remote: Storing index... done (52 ms)
+To https://dev.azure.com/MobileApplicationOrg/Mobile_Apps_Agile/_git/Mobile_Apps_Agile
+   e2f4ca1..fa2e815  POC -> POC
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+

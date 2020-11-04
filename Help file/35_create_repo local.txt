@@ -1,0 +1,453 @@
+-- create branch on local and then synch to server:
+
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git branch
+* POC
+  master
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git sync
+git: 'sync' is not a git command. See 'git --help'.
+
+The most similar command is
+        svn
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>copy con poc.txt
+poc
+^Z
+        1 file(s) copied.
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git add --all
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git commit -m "added poc.txt"
+[POC fa2e815] added poc.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 poc.txt
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git status
+On branch POC
+Your branch is ahead of 'origin/POC' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 289 bytes | 96.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Analyzing objects... (3/3) (143 ms)
+remote: Storing packfile... done (143 ms)
+remote: Storing index... done (52 ms)
+To https://dev.azure.com/MobileApplicationOrg/Mobile_Apps_Agile/_git/Mobile_Apps_Agile
+   e2f4ca1..fa2e815  POC -> POC
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 10DA-7901
+
+ Directory of C:\Users\kusno8\source\Mobile_Apps_Agile
+
+06/25/2020  09:07 AM    <DIR>          .
+06/25/2020  09:07 AM    <DIR>          ..
+06/25/2020  08:45 AM               162 appsettings.Development.json
+06/25/2020  08:45 AM               192 appsettings.json
+06/25/2020  08:45 AM    <DIR>          Controllers
+06/25/2020  08:45 AM               148 Mobile_Apps_Agile.csproj
+06/25/2020  08:45 AM    <DIR>          Models
+06/25/2020  08:45 AM    <DIR>          obj
+06/25/2020  09:07 AM                 6 poc.txt
+06/25/2020  08:45 AM               725 Program.cs
+06/25/2020  08:45 AM    <DIR>          Properties
+06/25/2020  08:45 AM             1,836 Startup.cs
+06/25/2020  08:45 AM    <DIR>          Views
+06/25/2020  08:45 AM    <DIR>          wwwroot
+               6 File(s)          3,069 bytes
+               8 Dir(s)  25,207,549,952 bytes free
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>cd..
+
+C:\Users\kusno8\source>git branch POClocal1
+fatal: not a git repository (or any of the parent directories): .git
+
+C:\Users\kusno8\source>cd Mobile_Apps_Agile
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git branch POClocal1
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git branch
+* POC
+  POClocal1
+  master
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git checkout POClocal1
+Switched to branch 'POClocal1'
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git branch
+  POC
+* POClocal1
+  master
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>mkdir POClocal1_branch
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>cd POClocal1_branch
+
+C:\Users\kusno8\source\Mobile_Apps_Agile\POClocal1_branch>touch branch1.txt
+'touch' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kusno8\source\Mobile_Apps_Agile\POClocal1_branch>copy con branch1.txt
+branch
+^Z
+        1 file(s) copied.
+
+C:\Users\kusno8\source\Mobile_Apps_Agile\POClocal1_branch>git status
+On branch POClocal1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ./
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\kusno8\source\Mobile_Apps_Agile\POClocal1_branch>cd ..
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git status
+On branch POClocal1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        POClocal1_branch/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git add --all
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git commit -m "new dir, file for POC"
+[POClocal1 325f175] new dir, file for POC
+ 1 file changed, 1 insertion(+)
+ create mode 100644 POClocal1_branch/branch1.txt
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git push
+fatal: The current branch POClocal1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin POClocal1
+
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git push --set -upstream origin POClocal1
+error: unknown switch `p'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --recurse-submodules[=(check|on-demand|no)]
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git push --set upstream origin POClocal1
+fatal: 'upstream' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git push --set upstream origin
+fatal: 'upstream' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git push --set-upstream origin POClocal1
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 357 bytes | 29.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Analyzing objects... (4/4) (283 ms)
+remote: Storing packfile... done (145 ms)
+remote: Storing index... done (51 ms)
+To https://dev.azure.com/MobileApplicationOrg/Mobile_Apps_Agile/_git/Mobile_Apps_Agile
+ * [new branch]      POClocal1 -> POClocal1
+Branch 'POClocal1' set up to track remote branch 'POClocal1' from 'origin'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>switch from master, see diff
+'switch' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git branch POClocal2_m
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git branch
+  POC
+  POClocal1
+  POClocal2_m
+* master
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git checkout POClocal2_m
+Switched to branch 'POClocal2_m'
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git branch
+  POC
+  POClocal1
+* POClocal2_m
+  master
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>mkdir POClocal2_m
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>copy con POClocal2_m.txt
+mkdir POClocal2_m
+^Z
+        1 file(s) copied.
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git branch
+  POC
+  POClocal1
+* POClocal2_m
+  master
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git status
+On branch POClocal2_m
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        POClocal2_m.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git add --all
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git commit -m "added dir,file, POClocal2_m"
+[POClocal2_m 72603be] added dir,file, POClocal2_m
+ 1 file changed, 1 insertion(+)
+ create mode 100644 POClocal2_m.txt
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git push
+fatal: The current branch POClocal2_m has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin POClocal2_m
+
+
+C:\Users\kusno8\source\Mobile_Apps_Agile> git push --set-upstream origin POClocal2_m
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 317 bytes | 31.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Analyzing objects... (3/3) (6 ms)
+remote: Storing packfile... done (180 ms)
+remote: Storing index... done (54 ms)
+To https://dev.azure.com/MobileApplicationOrg/Mobile_Apps_Agile/_git/Mobile_Apps_Agile
+ * [new branch]      POClocal2_m -> POClocal2_m
+Branch 'POClocal2_m' set up to track remote branch 'POClocal2_m' from 'origin'.
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+
+
+
+
+
+
+
+
+-- **************************************************************************************
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>create file inside other folder
+'create' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>
+C:\Users\kusno8\source\Mobile_Apps_Agile>mkdir POClocal3
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>cd POClocal3
+
+C:\Users\kusno8\source\Mobile_Apps_Agile\POClocal3>copy con POClocal3_f.txt
+POClocal3_f.txt
+^Z
+        1 file(s) copied.
+
+C:\Users\kusno8\source\Mobile_Apps_Agile\POClocal3>cd..
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git branch POClocal3
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git status
+On branch POClocal2_m
+Your branch is up to date with 'origin/POClocal2_m'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        POClocal3/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git remote
+origin
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git branch
+  POC
+  POClocal1
+* POClocal2_m
+  POClocal3
+  master
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git add --all
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git commit -m "added POClocal3"
+[POClocal2_m b234c3f] added POClocal3
+ 1 file changed, 1 insertion(+)
+ create mode 100644 POClocal3/POClocal3_f.txt
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 355 bytes | 29.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Analyzing objects... (4/4) (42 ms)
+remote: Storing packfile... done (194 ms)
+remote: Storing index... done (54 ms)
+To https://dev.azure.com/MobileApplicationOrg/Mobile_Apps_Agile/_git/Mobile_Apps_Agile
+   72603be..b234c3f  POClocal2_m -> POClocal2_m
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>mistake:   updated to branch POClocal2_m
+'mistake:' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git checkout POClocal3
+Switched to branch 'POClocal3'
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git status
+On branch POClocal3
+nothing to commit, working tree clean
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>mkdir POCLocal3_m_new
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>cd POCLocal3_m_new
+
+C:\Users\kusno8\source\Mobile_Apps_Agile\POCLocal3_m_new>copy con te.txt
+new to 3m
+^Z
+        1 file(s) copied.
+
+C:\Users\kusno8\source\Mobile_Apps_Agile\POCLocal3_m_new>cd ..
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git status
+On branch POClocal3
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        POCLocal3_m_new/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git add --all
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git commit -m "new 3m"
+[POClocal3 e5ba29f] new 3m
+ 1 file changed, 1 insertion(+)
+ create mode 100644 POCLocal3_m_new/te.txt
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git push
+fatal: The current branch POClocal3 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin POClocal3
+
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>git push --set-upstream origin POClocal3
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 335 bytes | 33.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Analyzing objects... (4/4) (40 ms)
+remote: Storing packfile... done (171 ms)
+remote: Storing index... done (66 ms)
+To https://dev.azure.com/MobileApplicationOrg/Mobile_Apps_Agile/_git/Mobile_Apps_Agile
+ * [new branch]      POClocal3 -> POClocal3
+Branch 'POClocal3' set up to track remote branch 'POClocal3' from 'origin'.
+
+C:\Users\kusno8\source\Mobile_Apps_Agile>
